@@ -76,6 +76,8 @@ class TripPlannerApp{
         System.out.println("Your total budget in " + currencySymbol + " is "
             + roundDouble(travelMoneyUSD * currencyExchangeRate) + " " + currencySymbol + ", "
             + "which per day is " + roundDouble((travelMoneyUSD * currencyExchangeRate) / travelDays ) + " " + currencySymbol );
+
+        System.out.println("***********\n");            
     }    
 
 
@@ -100,6 +102,7 @@ class TripPlannerApp{
             + " and when it is noon at home it will be "
             + ((timeDifferenceHours + 12 )%24) + ":" + timeDifferenceMinutes );
 
+        System.out.println("***********\n");            
     }
 
 
@@ -113,7 +116,9 @@ class TripPlannerApp{
         double countrySquareKm = input.nextDouble();
 
         double countrySquareMiles = countrySquareKm * 0.38610;
-        System.out.println("In miles2 that is " + countrySquareMiles);
+        System.out.println("In miles2 that is " + roundDouble(countrySquareMiles));
+
+        System.out.println("***********\n");
     }
 
     
