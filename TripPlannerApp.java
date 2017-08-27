@@ -7,11 +7,16 @@ import java.util.Scanner;
 
 class TripPlannerApp{
     public static void main(String[] args) {
+        
         greeting();
         travelTimeAndBudget();
         timeDifference();
         countryArea();
+        
         //System.out.println(roundDouble( 20.123456 ));
+
+        //System.out.println( leadZeros(5) );
+
     }
 
 
@@ -97,10 +102,10 @@ class TripPlannerApp{
         }
 
         System.out.println("That means when it is midnight at home it will be " 
-            + timeDifferenceHours + ":" + timeDifferenceMinutes
+            + timeDifferenceHours + ":" + leadZeros(timeDifferenceMinutes)
             + " in your travel destination"
             + " and when it is noon at home it will be "
-            + ((timeDifferenceHours + 12 )%24) + ":" + timeDifferenceMinutes );
+            + ((timeDifferenceHours + 12 )%24) + ":" + leadZeros(timeDifferenceMinutes) );
 
         System.out.println("***********\n");            
     }
@@ -129,5 +134,11 @@ class TripPlannerApp{
         double formattedNumber = (double)intToDouble / (double)multiplier;
         return formattedNumber;
     }
-    
+
+    public static String leadZeros(int number){
+        String numberString = String.valueOf(number);
+        String formattedNumber = ("00" + number ).substring( numberString.length() ) ;
+        return formattedNumber;
+    }
+
 }
