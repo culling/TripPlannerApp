@@ -12,11 +12,8 @@ class TripPlannerApp{
         travelTimeAndBudget();
         timeDifference();
         countryArea();
+
         
-        //System.out.println(roundDouble( 20.123456 ));
-
-        //System.out.println( leadZeros(5) );
-
     }
 
 
