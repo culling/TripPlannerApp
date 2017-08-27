@@ -7,11 +7,11 @@ import java.util.Scanner;
 
 class TripPlannerApp{
     public static void main(String[] args) {
-        //greeting();
-        //travelTimeAndBudget();
-        //timeDifference();
-        //countryArea();
-        System.out.println(roundDouble( 20.123456 ));
+        greeting();
+        travelTimeAndBudget();
+        timeDifference();
+        countryArea();
+        //System.out.println(roundDouble( 20.123456 ));
     }
 
 
@@ -68,14 +68,14 @@ class TripPlannerApp{
             + (travelDays*24*60) + " minutes" );
 
         //Money per Day
-        System.out.println("If you are going to spend $" + travelMoneyUSD + " USD"
+        System.out.println("If you are going to spend $" + roundDouble(travelMoneyUSD) + " USD"
             + " that means per day you can spend up to " 
-            + "$" + (travelMoneyUSD/travelDays) + " USD" );
+            + "$" + roundDouble(travelMoneyUSD/travelDays) + " USD" );
 
         //Money in Local Currency
         System.out.println("Your total budget in " + currencySymbol + " is "
-            + (travelMoneyUSD * currencyExchangeRate) + " " + currencySymbol + ", "
-            + "which per day is " + ((travelMoneyUSD * currencyExchangeRate) / travelDays ) + " " + currencySymbol );
+            + roundDouble(travelMoneyUSD * currencyExchangeRate) + " " + currencySymbol + ", "
+            + "which per day is " + roundDouble((travelMoneyUSD * currencyExchangeRate) / travelDays ) + " " + currencySymbol );
     }    
 
 
